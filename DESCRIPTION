@@ -1,0 +1,24 @@
+Package: caspr
+Title: PacMAN project R tools.
+Version: 0.0.1
+Authors@R: 
+    person(given = "Pieter",
+           family = "Provoost",
+           role = c("aut", "cre"),
+           email = "pieterprovoost@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0002-4236-0384"))
+Description: PacMAN project R tools.
+License: `use_mit_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+    dplyr,
+    stringi,
+    robis
+Remotes: iobis/robis    
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
