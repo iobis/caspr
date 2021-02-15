@@ -16,7 +16,8 @@ RoxygenNote: 7.1.1
 Imports:
     dplyr,
     stringi,
-    robis
+    robis,
+    bold
 Remotes: iobis/robis    
 Suggests:
     testthat,
