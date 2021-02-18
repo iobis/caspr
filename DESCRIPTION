@@ -17,7 +17,9 @@ Imports:
     dplyr,
     stringi,
     robis,
-    bold
+    bold,
+    rgbif,
+    stringr
 Remotes: iobis/robis    
 Suggests:
     testthat,

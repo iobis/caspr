@@ -3,7 +3,7 @@
 #' @param taxon taxon name
 #' @return a tibble
 #' @export
-bold_stats <- function(taxon) {
+bold_statistics <- function(taxon) {
   res <- bold::bold_seqspec(taxon)
   if (!is.data.frame(res)) {
     return(tibble())
@@ -15,5 +15,8 @@ bold_stats <- function(taxon) {
     group_by(markercode) %>%
     summarize(sequences = n(), .groups = "drop") %>%
     filter(!is.na(markercode) & markercode != "")
+  if (nrow(marker_stats) == 0) {
+    return(tibble())
+  }
   return(as_tibble(marker_stats))
 }

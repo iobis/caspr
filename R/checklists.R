@@ -1,3 +1,7 @@
+#' WKT string for the South Pacific
+#' @export
+wkt_south_pacific <- "POLYGON ((-218 -62, -218 14, -86 14, -67 -23, -74 -62, -218 -62))"
+
 #' Fetch expert priority checklists from the PacMAN GitHub repository.
 #'
 #' @param summarize group by taxon and concatenate references and remarks.
@@ -37,7 +41,7 @@ obis_checklist <- function(wrims = TRUE, area = "south_pacific") {
   geometry <- NULL
   areaid <- NULL
   if (area == "south_pacific") {
-    geometry <- "POLYGON ((-218 -62, -218 14, -86 14, -67 -23, -74 -62, -218 -62))"
+    geometry <- wkt_south_pacific
   } else if (area == "fiji") {
     areaid <- 68
   }
