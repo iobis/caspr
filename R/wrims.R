@@ -15,22 +15,24 @@ wrims_checklist <- function() {
       if (res$meta$endOfRecords) {
 
         result <- bind_rows(results_list) %>%
-          select(taxonID, canonicalName, taxonomicStatus, rank) %>%
+          select(taxonID, canonicalName, taxonomicStatus, rank, phylum, class, family) %>%
           mutate(taxonID = as.numeric(stringr::str_remove(taxonID, "urn:lsid:marinespecies.org:taxname:"))) %>%
-          filter(rank == "SPECIES" & taxonomicStatus == "ACCEPTED") %>%
+          rename(scientificName = canonicalName, taxonRank = rank) %>%
+          filter(taxonRank == "SPECIES" & taxonomicStatus == "ACCEPTED") %>%
+          select(-taxonomicStatus) %>%
+          mutate(taxonRank = "Species") %>%
           distinct() %>%
           as_tibble()
 
-        taxa <- taxon(result$taxonID)
-        result <- result %>%
-          select(taxonID, canonicalName) %>%
-          left_join(taxa, by = "taxonID") %>%
-          mutate(
-            scientificName = ifelse(is.na(scientificName), canonicalName, scientificName),
-            taxonRank = "Species",
-            wrims = TRUE
-          ) %>%
-          select(-canonicalName)
+        #taxa <- taxon(result$taxonID)
+        #result <- result %>%
+        #  select(taxonID, canonicalName) %>%
+        #  left_join(taxa, by = "taxonID") %>%
+        #  mutate(
+        #    scientificName = ifelse(is.na(scientificName), canonicalName, scientificName),
+        #    taxonRank = "Species",
+        #    wrims = TRUE
+        #  )
 
         return(result)
       }
