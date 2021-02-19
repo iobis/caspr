@@ -4,12 +4,10 @@
 \alias{expert_checklists}
 \title{Fetch expert priority checklists from the PacMAN GitHub repository.}
 \usage{
-expert_checklists(summarize = TRUE, enhance = FALSE)
+expert_checklists(summarize = TRUE)
 }
 \arguments{
 \item{summarize}{group by taxon and concatenate references and remarks.}
-
-\item{enhance}{add complete taxonomy from OBIS.}
 }
 \value{
 The expert priority checklist.

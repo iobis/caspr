@@ -1,6 +1,6 @@
 Package: caspr
 Title: PacMAN project R tools.
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Pieter",
            family = "Provoost",
@@ -19,7 +19,9 @@ Imports:
     robis,
     bold,
     rgbif,
-    stringr
+    stringr,
+    googlesheets4,
+    worrms
 Remotes: iobis/robis    
 Suggests:
     testthat,
