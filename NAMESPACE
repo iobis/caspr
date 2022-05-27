@@ -2,9 +2,13 @@
 
 export(bold_statistics)
 export(expert_checklists)
+export(mr_geometries)
 export(obis_checklist)
+export(plot_obis_dist)
+export(plot_wrims_dist)
 export(wkt_south_pacific)
 export(wrims_checklist)
+export(wrims_distribution)
 import(dplyr)
 import(robis)
 import(stringi)

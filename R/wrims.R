@@ -40,6 +40,9 @@ wrims_checklist <- function() {
     }
 }
 
+#' Get geometries by MRGID.
+#'
+#' @export
 mr_geometries <- function(mrgid) {
   url <- glue::glue("https://marineregions.org/rest/getGazetteerGeometries.jsonld/{mrgid}/")
   message(url)
@@ -53,6 +56,9 @@ mr_geometries <- function(mrgid) {
   }
 }
 
+#' Get WRiMS distribution records.
+#'
+#' @export
 wrims_distribution <- function(aphiaid, simplify = 0.5) {
   dist <- worrms::wm_distribution(aphiaid) %>%
     mutate(mrgid = stringr::str_replace_all(locationID, "http://marineregions.org/mrgid/", ""))
@@ -73,6 +79,9 @@ wrims_distribution <- function(aphiaid, simplify = 0.5) {
 
 world <- rnaturalearth::ne_countries(scale = "large", returnclass = "sf")
 
+#' Plot WRiMS distribution records.
+#'
+#' @export
 plot_wrims_dist <- function(dist) {
   ggplot() +
     geom_sf(data = world, fill = NA, size = 0.1, color = "#000000") +
@@ -84,6 +93,9 @@ plot_wrims_dist <- function(dist) {
     theme(legend.position = "bottom")
 }
 
+#' Plot OBIS distribution.
+#'
+#' @export
 plot_obis_dist <- function(aphiaid) {
   url <- glue::glue("https://api.obis.org/occurrence/grid/3?taxonid={aphiaid}")
   json <- httr::GET(URLencode(url)) %>% httr::content(as = "text")

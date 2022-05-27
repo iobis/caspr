@@ -2,10 +2,10 @@
 % Please edit documentation in R/wrims.R
 \name{wrims_checklist}
 \alias{wrims_checklist}
-\title{Get the complete WRiMS checklist}
+\title{Get the complete WRiMS checklist. This may not be complete due to missing macroalgae.}
 \usage{
 wrims_checklist()
 }
 \description{
-Get the complete WRiMS checklist
+Get the complete WRiMS checklist. This may not be complete due to missing macroalgae.
 }
