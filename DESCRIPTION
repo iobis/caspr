@@ -21,7 +21,8 @@ Imports:
     rgbif,
     stringr,
     googlesheets4,
-    worrms
+    worrms,
+    sf
 Remotes: iobis/robis    
 Suggests:
     testthat,
