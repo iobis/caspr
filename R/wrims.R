@@ -51,6 +51,7 @@ mr_geometries <- function(mrgid) {
     return(st_sfc(st_polygon()))
   } else {
     geom_fixed <- stringr::str_replace(geom, "<.*>\\s+", "")
+    geom_fixed <- geom_fixed[geom_fixed != ""]
     geom_union <- st_union(st_as_sfc(geom_fixed))
     return(geom_union)
   }

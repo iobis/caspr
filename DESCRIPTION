@@ -22,7 +22,8 @@ Imports:
     stringr,
     googlesheets4,
     worrms,
-    sf
+    sf,
+    ggplot2
 Remotes: iobis/robis    
 Suggests:
     testthat,

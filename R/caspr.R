@@ -5,6 +5,6 @@
 #'
 #' @docType package
 #' @name caspr
-#' @import dplyr stringi robis bold rgbif stringr googlesheets4 worrms sf
+#' @import dplyr stringi robis bold rgbif stringr googlesheets4 worrms sf ggplot2
 #' @author Pieter Provoost, \email{p.provoost@unesco.org}
 NULL
