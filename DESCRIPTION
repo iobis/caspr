@@ -1,6 +1,6 @@
 Package: caspr
 Title: PacMAN project R tools.
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person(given = "Pieter",
            family = "Provoost",
@@ -12,9 +12,8 @@ License: `use_mit_license()`
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Imports:
-    dplyr,
     stringi,
     robis,
     bold,
@@ -23,8 +22,16 @@ Imports:
     googlesheets4,
     worrms,
     sf,
-    ggplot2
-Remotes: iobis/robis    
+    ggplot2,
+    memoise,
+    glue,
+    raster,
+    qgisprocess,
+    dplyr
+Remotes:
+    iobis/robis,
+    paleolimbot/qgisprocess,
+    pieterprovoost/landr
 Suggests:
     testthat,
     knitr,

@@ -4,7 +4,7 @@
 \alias{mr_geometries}
 \title{Get geometries by MRGID.}
 \usage{
-mr_geometries(mrgid)
+mr_geometries(mrgids)
 }
 \description{
 Get geometries by MRGID.

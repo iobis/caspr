@@ -4,7 +4,7 @@
 \alias{wrims_distribution}
 \title{Get WRiMS distribution records.}
 \usage{
-wrims_distribution(aphiaid, simplify = 0.5)
+wrims_distribution(aphiaid, simplify = FALSE, cleanup = FALSE)
 }
 \description{
 Get WRiMS distribution records.
